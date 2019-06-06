@@ -7,6 +7,16 @@ class LightCounter extends Component {
         strikes: 0
       };
     }
+
+    timerTick() {
+        this.setState({
+            strikes: this.state.strikes + 100        })
+    }
+
+    componentDidMount() {
+        setInterval(this.timerTick, 1000)//calls timerTick function every second
+        //increases the strikes property by 100 every sec
+    }
   
     render(){
       return (
@@ -18,4 +28,4 @@ class LightCounter extends Component {
     }
   }
 
-  export default LightCounter;
+  export default LightCounter
