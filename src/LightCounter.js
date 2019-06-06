@@ -27,6 +27,7 @@ class LightCounter extends Component {
         <div>
           <h1>When lightning strikes...</h1>
           <h2 className='overlay'>{this.state.strikes}</h2>
+          <p>(since you loaded this example)</p>
         </div>
       );
     }
