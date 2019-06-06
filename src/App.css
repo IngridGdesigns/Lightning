@@ -1,13 +1,21 @@
 .App {
   text-align: center;
-  width: 280;
-  background-color: 'black';
+  background-color: black;
   padding: 40px;
-  font-family: 'sans-serif';
-  color: #998;
-  border-radius: 10
-
+  font-family: sans-serif;
+  color: rgb(232, 243, 247);
 }
+
+body {
+  background-image: url('https://designdroide.com/images/lightning-bolt-5.svg');
+}
+
+h2 {
+  color: rgb(255, 255, 176);
+}
+
+
+
 
 
 @keyframes App-logo-spin {

@@ -5,12 +5,16 @@ class LightCounter extends Component {
       super(props);
       this.state = {
         strikes: 0
-      };
+      }
+      this.timerTick = this.timerTick.bind(this)
     }
 
-    timerTick() {
-        this.setState({
-            strikes: this.state.strikes + 100        })
+    timerTick = () => {
+        this.setState((prevState) => {
+            return {
+                strikes: prevState.strikes + 100
+            }
+        })
     }
 
     componentDidMount() {
@@ -21,8 +25,8 @@ class LightCounter extends Component {
     render(){
       return (
         <div>
-          <h1>Hello!</h1>
-          <h1>{this.state.strikes}</h1>
+          <h1>When lightning strikes...</h1>
+          <h2 className='overlay'>{this.state.strikes}</h2>
         </div>
       );
     }
